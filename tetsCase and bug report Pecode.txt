@@ -1,0 +1,55 @@
+1.Check react messages after click to "Login" button with empty text fields:
+    Precondition:
+          -open url- https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php
+    Steps:
+          1) In the opened page need to click the "Login" button, under the password field. Must appear the messages under "Username" and "Password" fields.
+          2) Check the message under "Username" field, it must be "Please enter username."
+          3) Check the message under "Password" field, it must be "Please enter password."
+
+2.Check message appear after using only password text field:
+    Precondition:
+          -open url- https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php
+    Steps:
+          1) In the opened page need to type "SomeText" it password text field and click the "Login" button. Must appear message under username text field.
+          2) Check  this message, must be "Please enter username."
+
+3.Check message appear after using only username text field:
+    Precondition:
+          -open url- https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php
+    Steps:
+          1) In the opened page need to type "Username" it password text field and click the "Login" button. Must appear message under password text field.
+          2) Check  this message, must be "Please enter password."
+
+4.Verifying valid symbol is accepted by username text field and their number:
+    Precondition:
+          -open url- https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php
+    Steps:
+          1) In to the username text field type next symbols "|'*" 20(twenty) times and click Enter button. 
+          2) Count number of symbols is in the username text field. Must be 60(sixty).
+
+
+
+
+
+BugReport:
+Bug 1
+Id 01
+Priority- Medium
+Severity- Major 
+Summary- incorrect symbols accepts in the username field
+Reproduse:
+     Steps:
+          1) In to the username text field type next symbols "|'*" 20(twenty) times and click Enter button. 
+
+Bug 2
+Id 02
+Id 01
+Priority- High
+Severity- Major minor
+Summary- Secure breach bug
+Reproduse: 
+    Steps:
+           -open url- https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php
+          1) In the opened page need to type "Username" it username text field.
+          2) Need to type "Password" it password text field and click the "Login" button.
+       Bug- it show the username is incorrect, it makes possible to choose the right user
