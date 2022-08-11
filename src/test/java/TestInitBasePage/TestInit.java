@@ -22,10 +22,6 @@ public class TestInit {
         driver.get(site);
     }
 
-    public String getCurrentUrl() {
-        return driver.getCurrentUrl();
-    }
-
     public void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
@@ -64,5 +60,9 @@ public class TestInit {
     @AfterMethod
     public void after() {
         driver.quit();
+    }
+
+    public void printLn(String text){
+        System.out.println(text);
     }
 }
