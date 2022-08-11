@@ -3,6 +3,7 @@ package Pages;
 import TestInitBasePage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class PecodeLoginPage extends BasePage {
 
@@ -37,7 +38,12 @@ public class PecodeLoginPage extends BasePage {
 
     public void countLengthMethod(){
         for (int i = 0; i < 20; i++) {
-            inputText("username").sendKeys("qqq");
+            inputText("username").sendKeys("|'*");
         }
     }
+
+    public void assertTestOne(){
+            Assert.assertTrue(errorTextUnderField("No account found with that username").getText().contains("No account found with that username"));
+            System.out.println("Bug found, username field accept not valid symbols");
+        }
 }
