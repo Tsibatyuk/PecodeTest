@@ -61,4 +61,8 @@ public class TestInit {
     public void after() {
         driver.quit();
     }
+
+    public void printLn(String text){
+        System.out.println(text);
+    }
 }

@@ -36,10 +36,11 @@ public class PecodeLoginPage extends BasePage {
         return $(TEXT_UNDER_LOGO);
     }
 
-    public void countLengthMethod(){
+    public void sendSymbolsToUsernameField(){
         for (int i = 0; i < 20; i++) {
             inputText("username").sendKeys("|'*");
         }
+        inputText("username").sendKeys("\n");
     }
 
     public void assertTestOne(){
