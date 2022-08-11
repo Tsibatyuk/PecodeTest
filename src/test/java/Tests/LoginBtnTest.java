@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class LoginBtnTest extends TestInit {
 
     @Test
-    public void loginBtnTest(){
+    public void messageAfterLoginBtnClickTest(){
 
         PecodeLoginPage pecodeLoginPage = new PecodeLoginPage(driver);
 
